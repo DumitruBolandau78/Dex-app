@@ -12,7 +12,7 @@ btnSearch.addEventListener('click', () => {
     const word = input.value;
     const API = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
 
-    const date = fetch(API)
+    fetch(API)
         .then(res => {
             if(res.status === 200){
                 return res.json();
